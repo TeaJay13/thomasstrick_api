@@ -1,0 +1,22 @@
+{
+  "name": "thomasstrick_api",
+  "version": "1.0.0",
+  "description": "TJ Strickland",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js"
+
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TeaJay13/thomasstrick_api.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/TeaJay13/thomasstrick_api/issues"
+  },
+  "homepage": "https://github.com/TeaJay13/thomasstrick_api#readme"
+}
