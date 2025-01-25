@@ -1,9 +1,22 @@
 const express = require('express');
+const cors = require('cors');
 const app = express();
-const port = process.env.PORT || 3000;
+const dotenv = (require('dotenv').config());
+const port = process.env.PORT;
+const mongodb = require('./db/connect')
 
-app.use('/', require('./routes'))
+app.use(cors())
+.use(express.json())
+.use(express.urlencoded({ extended: true }))
+.use('/', require('./routes'))
 
-app.listen(port, () => {
-    console.log(`Running on port ${port}`)
+
+
+mongodb.inintDb((err, mongodb) => {
+   if(err) {
+       console.log(err)
+   } else {
+       app.listen(port)
+       console.log('Connected to DB and listening on port ${port}')
+   }
 })
