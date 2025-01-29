@@ -1,1 +1,10 @@
-GET http://localhost:3000 HTTP/1.1
+
+
+###
+GET http://localhost:3000/contacts HTTP/1.1
+###
+GET http://localhost:3000/contacts/67998f6ba569bb8fa56392a4 HTTP/1.1
+###
+GET http://localhost:3000/contacts/67998f6ba569bb8fa56392a5 HTTP/1.1
+###
+GET http://localhost:3000/contacts/67998f6ba569bb8fa56392a6 HTTP/1.1
