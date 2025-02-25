@@ -80,3 +80,5 @@ const deleteContact = async (req, res) => {
 };
 
 module.exports = { getAll, getSingle, createContact, updateContact, deleteContact };
+
+//fix the error in the code above
