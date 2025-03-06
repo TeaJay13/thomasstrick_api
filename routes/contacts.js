@@ -2,6 +2,7 @@ const express = require('express');
 const router = express.Router();
 
 const contactsController = require('../controllers/contacts');
+const validate = require('../middleware/validate');
 
 /**
  * @swagger
@@ -80,7 +81,7 @@ router.get('/:id', contactsController.getSingle);
  *         description: Invalid input data.
  */
 
-router.post('/', contactsController.createContact);
+router.post('/',validate.createContact,contactsController.createContact);
 
 
 /**
@@ -127,7 +128,7 @@ router.post('/', contactsController.createContact);
  *       404:
  *         description: User not found.
  */
-router.put('/:id', contactsController.updateContact);
+router.put('/:id',validate.updateContact, contactsController.updateContact);
 
 /**
  * @swagger
@@ -148,6 +149,6 @@ router.put('/:id', contactsController.updateContact);
  *       404:
  *         description: User not found.
  */
-router.delete('/:id', contactsController.deleteContact);
+router.delete('/:id',validate.deleteContact, contactsController.deleteContact);
 
 module.exports = router;
